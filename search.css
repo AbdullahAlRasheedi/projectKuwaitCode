@@ -26,13 +26,13 @@ h1{
     border-radius: 25px 0 0 25px;
     font-size: 20px;
     transition: all 0.4s ease-in-out;
-
+    opacity: 0.8;
 }
 #search:focus-visible{
-    background-color: rgb(0, 191, 255);
     width: 300px;
     padding-left: 20px;
     box-shadow: 0 4px 8px ;
+    opacity: 1;
 }
 
 #btn{
@@ -44,22 +44,26 @@ h1{
     background-color: rgb(245, 103, 21);
     font-size: 20px;
     transition: all 0.8 ease-in-out;
-    
+    opacity: 0.8;
     
 }
 #btn:hover{
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(245, 103, 21);
     box-shadow: 0 2px 4px ;
-    
+    opacity: 1;
 
+}
+#icone{
+    transition: all 0.2s ease-in-out;
+}
+#icone:hover{
+    transform: rotate(50deg);
 }
 .list{
     width: 200px;
 }
 .list ul{
     list-style: none;
-    margin-top: 1%;
-    
 }
 .list ul li{
     width: 170px;
@@ -67,13 +71,12 @@ h1{
     font-size: 40px;
     line-height: 50px;
     text-align: center;
-    float: left;
+    float: right;
     color: black;
     position: relative;
-    
 }
 .list ul ul{
-    display: none;  
+    display: none;
 }
 .list ul li:hover > ul{
     display: block;
@@ -85,7 +88,6 @@ a{
     height: 100%;
     width: 150px;
     padding: 0;
-    
 }
 .image:hover{
     transform: scale(1.2);
@@ -97,6 +99,8 @@ a{
     width: 50%;
     height: 150px;
     text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 #storeTitle{
     text-decoration: brown;

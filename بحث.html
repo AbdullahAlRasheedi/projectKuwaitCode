@@ -7,7 +7,7 @@
     <title>أين</title>
     <link rel = "shortcut icon" type="image/x-icon" href="./image/W.jpg">
     <style>
-        @charset "utf-8";
+@charset "utf-8";
 
 body{
     background-color: orange;
@@ -32,16 +32,16 @@ h1{
     height: 28px;
     padding: 9px 9px 9px 20px;
     border: none;
-    border-radius: 0 25px 25px 0 ;
+    border-radius: 0 25px 25px 0;
     font-size: 20px;
     transition: all 0.4s ease-in-out;
-
+    opacity: 0.8;
 }
 #search:focus-visible{
-    background-color: rgb(0, 191, 255);
     width: 300px;
     padding-right: 20px;
     box-shadow: 0 4px 8px ;
+    opacity: 1;
 }
 
 #btn{
@@ -53,22 +53,26 @@ h1{
     background-color: rgb(245, 103, 21);
     font-size: 20px;
     transition: all 0.8 ease-in-out;
-    
+    opacity: 0.8;
     
 }
 #btn:hover{
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(245, 103, 21);
     box-shadow: 0 2px 4px ;
-    
+    opacity: 1;
 
+}
+#icone{
+    transition: all 0.2s ease-in-out;
+}
+#icone:hover{
+    transform: rotate(50deg);
 }
 .list{
     width: 200px;
 }
 .list ul{
     list-style: none;
-    margin-top: 1%;
-    
 }
 .list ul li{
     width: 170px;
@@ -76,13 +80,12 @@ h1{
     font-size: 40px;
     line-height: 50px;
     text-align: center;
-    float: left;
+    float: right;
     color: black;
     position: relative;
-    
 }
 .list ul ul{
-    display: none;  
+    display: none;
 }
 .list ul li:hover > ul{
     display: block;
@@ -94,7 +97,6 @@ a{
     height: 100%;
     width: 150px;
     padding: 0;
-    
 }
 .image:hover{
     transform: scale(1.2);
@@ -106,6 +108,8 @@ a{
     width: 50%;
     height: 150px;
     text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 #storeTitle{
     text-decoration: brown;
@@ -119,8 +123,8 @@ a{
         <ul>
             <li><i class="fas fa-cog"></i>
                 <ul>
-                    <li><a href="./بحث.html">عربي</a></li>
                     <li><a href="./search.html">English</a></li>
+                    <li><a href="./بحث.html">عربي</a></li>
                 </ul>
             </li>
         </ul>
@@ -145,10 +149,10 @@ a{
                 <option value="laptop"></option>
             </datalist>
 
-            <input class="search" id="btn" onclick="send()"type="submit" value="بحث">
+            <input class="btn" id="btn" onclick="send()"type="submit" value="بحث">
             
     </div>
-    <div class="store">
+    <div class="store" id="show">
         <h1 id="storeTitle">المتاجر</h1>
         <a id="blink" href="#" target="blink"><img class="image blink" src="./store image/blink.png" alt="blink"></a>
         <a id="amazon" herf="#" target="blink"><img class="image amazon" src="./store image/amazon.png" alt="amazon"></a>
