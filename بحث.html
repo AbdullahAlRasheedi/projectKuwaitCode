@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>أين</title>
+    <link rel = "shortcut icon" type="image/x-icon" href="./image/W.jpg">
+    <style>
+        @charset "utf-8";
+
+body{
+    background-color: orange;
+    /* transition: 0.8s; */
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: none;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+#search{
+    outline: none;
+    width: 256px ;
+    height: 28px;
+    padding: 9px 9px 9px 20px;
+    border: none;
+    border-radius: 0 25px 25px 0 ;
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+
+}
+#search:focus-visible{
+    background-color: rgb(0, 191, 255);
+    width: 300px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px ;
+}
+
+#btn{
+    outline: none;
+    width: 100px ;
+    height: 48px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    background-color: rgb(245, 103, 21);
+    font-size: 20px;
+    transition: all 0.8 ease-in-out;
+    
+    
+}
+#btn:hover{
+    background-color: rgb(0, 191, 255);
+    box-shadow: 0 2px 4px ;
+    
+
+}
+.list{
+    width: 200px;
+}
+.list ul{
+    list-style: none;
+    margin-top: 1%;
+    
+}
+.list ul li{
+    width: 170px;
+    height: 50px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: black;
+    position: relative;
+    
+}
+.list ul ul{
+    display: none;  
+}
+.list ul li:hover > ul{
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+.image{
+    height: 100%;
+    width: 150px;
+    padding: 0;
+    
+}
+.image:hover{
+    transform: scale(1.2);
+}
+.store{
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    width: 50%;
+    height: 150px;
+    text-align: center;
+}
+#storeTitle{
+    text-decoration: brown;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="list">
+        <ul>
+            <li><i class="fas fa-cog"></i>
+                <ul>
+                    <li><a href="./بحث.html">عربي</a></li>
+                    <li><a href="./search.html">English</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div dir="rtl" class="search-box">
+        <h1>أين</h1>
+
+            <input dir="rtl" class="search" id="search" type="text" placeholder="اكتب للبحث">
+
+            <datalist id="datalist1">
+                <option value="Playstation 5"></option>
+                <option value="Xbox serce x"></option>
+                <option value="RTX 3080"></option>
+                <option value="RTX 3060ti"></option>
+                <option value="RTX 3070"></option>
+                <option value="RTX 3090"></option>
+                <option value="Playstation 4 pro"></option>
+                <option value="RAM"></option>
+                <option value="Case"></option>
+                <option value="Mother Boread"></option>
+                <option value="laptop"></option>
+            </datalist>
+
+            <input class="search" id="btn" onclick="send()"type="submit" value="بحث">
+            
+    </div>
+    <div class="store">
+        <h1 id="storeTitle">المتاجر</h1>
+        <a id="blink" href="#" target="blink"><img class="image blink" src="./store image/blink.png" alt="blink"></a>
+        <a id="amazon" herf="#" target="blink"><img class="image amazon" src="./store image/amazon.png" alt="amazon"></a>
+        <a id="quadra" herf="#" target="blink"><img class="image quadra" src="./store image/quadra.png" alt="quadra"></a>
+        <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="./store image/newEgg.png" alt="newEgg"></a>
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/8501a04e23.js" crossorigin="anonymous"></script>
+
+
+    <script src="./search.js"></script>
+
+</body>
+
+</html>
