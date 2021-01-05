@@ -25,3 +25,10 @@ function send(){
     document.getElementById("quadra").href=`https://quadrastores.com/index.php/home/products/0/0/0/${userIntery()}`;
     document.getElementById("newEgg").href=`https://www.newegg.com/global/kw-en/p/pl?d=${userIntery()}`;
 }
+
+function SerchLength(){
+    userIntery();
+    if(userIntery() == 0){
+        remove();
+    }   
+}
