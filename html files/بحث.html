@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>أين</title>
+    <link rel="stylesheet" href="../css files/بحث.css">
+    <link rel = "shortcut icon" type="image/x-icon" href="./logo/W.jpg">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="list">
+        <ul>
+            <li><i class="fas fa-cog" id="icone"></i>
+                <ul>
+                    <li><a href="./search.html">English</a></li>
+                    <li><a href="./بحث.html">عربي</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <div dir="rtl" class="search-box">
+        <h1>أين</h1>
+
+            <input dir="rtl" class="search" id="search" type="text" onchange="SerchLength()" placeholder="اكتب للبحث">
+
+            <datalist id="datalist1">
+                <option value="Playstation 5"></option>
+                <option value="Xbox serce x"></option>
+                <option value="RTX 3080"></option>
+                <option value="RTX 3060ti"></option>
+                <option value="RTX 3070"></option>
+                <option value="RTX 3090"></option>
+                <option value="Playstation 4 pro"></option>
+                <option value="RAM"></option>
+                <option value="Case"></option>
+                <option value="Mother Boread"></option>
+                <option value="laptop"></option>
+            </datalist>
+
+            <input class="btn" id="btn" onclick="send()"type="submit" value="بحث">
+            
+    </div>
+    <div class="store" id="show">
+        <h1 id="storeTitle">المتاجر</h1>
+        <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
+        <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
+        <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
+        <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8501a04e23.js" crossorigin="anonymous"></script>
+
+
+    <script src="../javascript file/search.js"></script>
+
+</body>
+
+</html>

@@ -4,9 +4,9 @@
 <head>
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./search.css" type="text/css">
     <title>Where</title>
-    <link rel = "shortcut icon" type="image/x-icon" href="./image/W.jpg">
+    <link rel = "stylesheet" href="../css files/search.css" type="text/css">
+    <link rel = "shortcut icon" href="./logo/W.jpg" type="image/x-icon" >
 
 </head>
 
@@ -23,10 +23,14 @@
         </ul>
     </div>
 
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <div class="search-box">
         <h1 id="s">Where</h1>
 
-            <input class="search" id="search" list="datalist1" onclick="SerchLength()" type="text" placeholder="type to search">
+            <input class="search" id="search" list="datalist1" onchange="SerchLength()" type="text" placeholder="type to search">
 
             <datalist id="datalist1">
                 <option value="Motherboard"></option>
@@ -49,17 +53,18 @@
     </div>
     <div class="store" id="show">
         <h1 id="storeTitle">Stores</h1>
-        <a id="blink" href="#" target="blink"><img class="image blink" src="./store image/blink.png" alt="blink"></a>
-        <a id="amazon" herf="#" target="blink"><img class="image amazon" src="./store image/amazon.png" alt="amazon"></a>
-        <a id="quadra" herf="#" target="blink"><img class="image quadra" src="./store image/quadra.png" alt="quadra"></a>
-        <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="./store image/newEgg.png" alt="newEgg"></a>
+        <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
+        <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
+        <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
+        <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
     </div>
-    
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8501a04e23.js" crossorigin="anonymous"></script>
 
 
-    <script src="./search.js"></script>
+    <script src="../javascript file/search.js"></script>
 
 </body>
 
