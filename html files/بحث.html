@@ -29,9 +29,9 @@
     </div>
 
     <div dir="rtl" class="search-box">
-        <h1>أين</h1>
+        <h1 class="mainTitle">أين</h1>
 
-            <input dir="rtl" class="search" id="search" type="text" onchange="SerchLength()" placeholder="اكتب للبحث">
+            <input dir="rtl" class="search" id="search" type="text" onkeyup="SerchLength()" placeholder="اكتب للبحث">
 
             <datalist id="datalist1">
                 <option value="Playstation 5"></option>
@@ -50,12 +50,19 @@
             <input class="btn" id="btn" onclick="send()"type="submit" value="بحث">
             
     </div>
-    <div class="store" id="show">
+    <div class="storeMain" id="show">
         <h1 id="storeTitle">المتاجر</h1>
-        <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
-        <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
-        <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
-        <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+        <div class="storeBg">
+            <div class="store">
+                <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
+                <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
+                <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
+                <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+                <a id="bestAlYousifi" herf="#" target="blink"><img class="image bestAlYousifi" src="../store image/bestAlYousifi.png" alt="bestAlYousifi"></a>
+                <a id="eureka" herf="#" target="blink"><img class="image eureka" src="../store image/eureka.png" alt="eureka"></a>
+                <a id="xCite" herf="#" target="blink"><img class="image xCite" src="../store image/xcite.png" alt="xcite"></a>
+            </div>
+        </div>
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

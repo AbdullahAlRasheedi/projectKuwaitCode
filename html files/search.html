@@ -12,6 +12,7 @@
 
 <body>
 
+    <!-- drop menu -->
     <div class="list">
         <ul>
             <li><i class="fas fa-cog" id="icone"></i>
@@ -23,15 +24,17 @@
         </ul>
     </div>
 
+    <!-- Loading icon -->
     <div class="loader_bg">
         <div class="loader"></div>
     </div>
 
+    <!-- search div -->
     <div class="search-box">
-        <h1 id="s">Where</h1>
+        <h1 class="mainTitle">Where</h1>
 
-            <input class="search" id="search" list="datalist1" onchange="SerchLength()" type="text" placeholder="type to search">
-
+            <input class="search" id="search" list="datalist1" onkeyup="SerchLength()" type="text" placeholder="type to search">
+            
             <datalist id="datalist1">
                 <option value="Motherboard"></option>
                 <option value="RAM"></option>
@@ -51,12 +54,20 @@
             <input class="btn" id="btn" onclick="send()"type="submit" value="search">
             
     </div>
-    <div class="store" id="show">
+    <!-- stores -->
+    <div class="storeMain" id="show">
         <h1 id="storeTitle">Stores</h1>
-        <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
-        <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
-        <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
-        <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+        <div class="storeBg">
+            <div class="store">
+                <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
+                <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
+                <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
+                <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+                <a id="bestAlYousifi" herf="#" target="blink"><img class="image bestAlYousifi" src="../store image/bestAlYousifi.png" alt="bestAlYousifi"></a>
+                <a id="eureka" herf="#" target="blink"><img class="image eureka" src="../store image/eureka.png" alt="eureka"></a>
+                <a id="xCite" herf="#" target="blink"><img class="image xCite" src="../store image/xcite.png" alt="xcite"></a>
+            </div>
+        </div>
     </div>
 
     

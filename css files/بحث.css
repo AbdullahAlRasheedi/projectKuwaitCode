@@ -47,12 +47,12 @@ body{
     background-color: orange;
     /* transition: 0.8s; */
 }
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.mainTitle{
+    font-size: 40px;
 }
 .search-box{
     position: absolute;
-    top: 45%;
+    top: 30%;
     left: 50%;
     background-color: none;
     width: 500px;
@@ -124,28 +124,35 @@ h1{
 .list ul li:hover > ul{
     display: block;
 }
-a{
+.list a{
     text-decoration: none;
 }
 .image{
-    height: 100%;
-    width: 150px;
-    padding: 0;
+    width: 218px;
     transition: all 0.2s ease-in-out;
 }
 .image:hover{
     transform: scale(1.1);
+
 }
-.store{
+.storeMain{
     position: absolute;
-    top: 70%;
-    left: 25%;
-    width: 50%;
+    top: 60%;
+    left: 30%;
+    width: 40%;
     height: 150px;
     text-align: center;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    
 }
 #storeTitle{
-    text-decoration: brown;
+    text-decoration: none;
+    font-size: 40px;
+}
+.storeBg{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40vw;
 }
