@@ -13,7 +13,7 @@
 <body>
 
     <!-- drop menu -->
-    <div class="list">
+    <!-- <div class="list">
         <ul>
             <li><i class="fas fa-cog" id="icone"></i>
                 <ul>
@@ -22,6 +22,28 @@
                 </ul>
             </li>
         </ul>
+    </div> -->
+
+
+    <div id="content">
+        <span class="slide">
+            <a href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </span>
+    </div>
+    <div id="menu" class="nav">
+        <a href="#" class="close" onclick="closeSlideMenu()">
+            <i class="fas fa-times"></i>
+        </a>
+            <a href="./search.html"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-user-alt"></i> Profile</a>
+            <a href="#"><i class="fas fa-address-card"></i> About us</a>
+            <a href="#"><i class="fas fa-store"></i> Stores</a>
+            
+            
+    </div>
+    
     </div>
 
     <!-- Loading icon -->
@@ -52,20 +74,21 @@
             </datalist>
 
             <input class="btn" id="btn" onclick="send()"type="submit" value="search">
+            <input type="button"id="save" onclick="saveWord()" value="save">
             
     </div>
     <!-- stores -->
     <div class="storeMain" id="show">
         <h1 id="storeTitle">Stores</h1>
         <div class="storeBg">
-            <div class="store">
-                <a id="blink" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
-                <a id="amazon" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
-                <a id="quadra" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
-                <a id="newEgg" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
-                <a id="bestAlYousifi" herf="#" target="blink"><img class="image bestAlYousifi" src="../store image/bestAlYousifi.png" alt="bestAlYousifi"></a>
-                <a id="eureka" herf="#" target="blink"><img class="image eureka" src="../store image/eureka.png" alt="eureka"></a>
-                <a id="xCite" herf="#" target="blink"><img class="image xCite" src="../store image/xcite.png" alt="xcite"></a>
+            <div class="store" onclick="getStore()">
+                <a id="0" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
+                <a id="1" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
+                <a id="2" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
+                <a id="3" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+                <a id="4" herf="#" target="blink"><img class="image bestAlYousifi" src="../store image/bestAlYousifi.png" alt="bestAlYousifi"></a>
+                <a id="5" herf="#" target="blink"><img class="image eureka" src="../store image/eureka.png" alt="eureka"></a>
+                <a id="6" herf="#" target="blink"><img class="image xCite" src="../store image/xcite.png" alt="xcite"></a>
             </div>
         </div>
     </div>
