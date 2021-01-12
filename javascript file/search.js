@@ -37,7 +37,6 @@ function show(){
         document.getElementById("save").style.display = "block"
         
 }
-
 //link for store
 function send(){
     if(check == true){
@@ -53,6 +52,7 @@ function send(){
     }
     else{
         remove();
+        
     }
 }
 
@@ -69,41 +69,50 @@ function SerchLength(){
 }
 
 
-let store = [
-    {name:"blink"},
-    {name:"amazon"},
-    {name:"quadra"},
-]
-let save = []
-
-function getStore(){
-    for (let i = 0; i < store.length; i++) {
-        let s = document.getElementById(`${i}`)
-    }
-}
+// let store = [
+//     {name:"blink"},
+//     {name:"amazon"},
+//     {name:"quadra"},
+// ]
+// function getStore(){
+//     for (let i = 0; i < store.length; i++) {
+//         let s = document.getElementById(`${i}`)
+//     }
+// }
 
 function filter(array , user){
     for (let i = 0; i < array.length+1; i++) {
-        if(user != array[i]){
-            return user;
-        }
-        else{
+        if(user == array[i]){
             return null;
         }
+        else{
+            return user;
+        }
     }
 }
-function saveWord(){
-    let user = userIntery();
-    if(check == true){
-        let saved = filter(save,user)
-        save.push(saved)
-        console.log(save)
-        document.getElementById("add").innerHTML += `<li><a href="">${saved}</a></li>`
-    }
-    
-    
+let save = []
 
-}
+function saveWord(){
+    let count = 0;
+    let user = userIntery();
+    if (filter(save,user) != null) {
+        save.push(user)
+        console.log(save)
+        document.getElementById("add").innerHTML += `<li id=${count} ><a herf="">${user} <i onclick="delet(${count})" class="fas fa-trash-alt"></i></a></li>`
+        count++;
+        let li = document.getElementById(count);
+    }
+    
+    }
+    let ul = document.getElementById("add");
+    
+    function delet(x){
+        save.pop(x);
+        console.log(save)
+        ul.parentNode.removeChild(li);
+    }
+
+
 $(`.btn`).click(function(){
     $(this).toggleClass("click");
     $(`.sidebar`).toggleClass("show");
