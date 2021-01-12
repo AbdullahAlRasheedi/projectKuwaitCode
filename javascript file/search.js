@@ -79,8 +79,6 @@ let save = []
 function getStore(){
     for (let i = 0; i < store.length; i++) {
         let s = document.getElementById(`${i}`)
-        console.log(store.name[i])
-        
     }
 }
 
@@ -89,22 +87,29 @@ function filter(array , user){
         if(user != array[i]){
             return user;
         }
-        else {
-            return undefined;
+        else{
+            return null;
         }
-            
-        
     }
 }
-console.log(save)
 function saveWord(){
     let user = userIntery();
     if(check == true){
         let saved = filter(save,user)
         save.push(saved)
-        
+        console.log(save)
+        document.getElementById("add").innerHTML += `<li><a href="">${saved}</a></li>`
     }
     
-    document.getElementById("save").innerText = 'save'
+    
 
 }
+$(`.btn`).click(function(){
+    $(this).toggleClass("click");
+    $(`.sidebar`).toggleClass("show");
+});
+
+$(`.feat-btn`).click(function(){
+    $(`nav ul .feat-show`).toggleClass("show")
+    $(`nav ul .first`).toggleClass("rotate")
+});

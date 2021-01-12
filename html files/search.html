@@ -5,46 +5,33 @@
 
     <meta charset="UTF-8">
     <title>Where</title>
-    <link rel = "stylesheet" href="../css files/search.css" type="text/css">
-    <link rel = "shortcut icon" href="./logo/W.jpg" type="image/x-icon" >
+    <link rel = "stylesheet" href="../css files/search.css">
+    <link rel = "shortcut icon" href="./logo/W.jpg" >
 
 </head>
 
 <body>
-
-    <!-- drop menu -->
-    <!-- <div class="list">
-        <ul>
-            <li><i class="fas fa-cog" id="icone"></i>
-                <ul>
-                    <li><a href="./بحث.html">عربي</a></li>
-                    <li><a href="./search.html">English</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div> -->
-
-
-    <div id="content">
-        <span class="slide">
-            <a href="#" onclick="openSlideMenu()">
-                <i class="fas fa-bars"></i>
-            </a>
-        </span>
+    <!-- side menu -->
+    <div class="btn">
+        <span class="fas fa-bars"></span>
     </div>
-    <div id="menu" class="nav">
-        <a href="#" class="close" onclick="closeSlideMenu()">
-            <i class="fas fa-times"></i>
-        </a>
-            <a href="./search.html"><i class="fas fa-home"></i> Home</a>
-            <a href="#"><i class="fas fa-user-alt"></i> Profile</a>
-            <a href="#"><i class="fas fa-address-card"></i> About us</a>
-            <a href="#"><i class="fas fa-store"></i> Stores</a>
-            
-            
-    </div>
-    
-    </div>
+    <nav class="sidebar">
+        <div class="text">Where
+            <ul>
+                <li><a href="./search.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-user-alt"></i> Profile</a></li>
+                <li>
+                    <a class="feat-btn"><i class="fas fa-sticky-note"> Note</i><span class="fas fa-caret-down first"></span></a>
+                    
+                    <ul class="feat-show" id="add">
+                        
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-address-card"></i> About website</a></li>
+                
+            </ul>
+        </div>
+    </nav>
 
     <!-- Loading icon -->
     <div class="loader_bg">
@@ -73,8 +60,8 @@
                 <option value="laptop"></option>
             </datalist>
 
-            <input class="btn" id="btn" onclick="send()"type="submit" value="search">
-            <input type="button"id="save" onclick="saveWord()" value="save">
+            <input class="result" id="btn" onclick="send()"type="submit" value="search">
+            <input type="button"id="save" onclick="saveWord()" value="save word">
             
     </div>
     <!-- stores -->
@@ -96,8 +83,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8501a04e23.js" crossorigin="anonymous"></script>
-
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="../javascript file/search.js"></script>
 
 </body>
