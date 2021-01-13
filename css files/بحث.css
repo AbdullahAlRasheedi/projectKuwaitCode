@@ -1,4 +1,5 @@
 @charset "utf-8";
+/* loading logo */
 .loader_bg{
     position: fixed;
     z-index: 1;
@@ -43,23 +44,35 @@
         opacity: 0;
     }
 }
+
+
+/* --------------------------------------------------------------------------- */
+
 body{
     background-color: orange;
-    /* transition: 0.8s; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    direction: rtl;
 }
+*{
+    margin: 0;
+    padding: 0;
+}
+/* this main title for wibsite */
 .mainTitle{
     font-size: 40px;
 }
+/* search background div */
 .search-box{
     position: absolute;
     top: 30%;
     left: 50%;
-    background-color: none;
-    width: 500px;
+    width: 564px;
     height: 200px;
     text-align: center;
     transform: translate(-50%,-50%);
+    
 }
+/* search div */
 #search{
     outline: none;
     width: 256px ;
@@ -71,13 +84,14 @@ body{
     transition: all 0.4s ease-in-out;
     opacity: 0.8;
 }
+/* search change while user on search bar */
 #search:focus-visible{
     width: 300px;
-    padding-right: 20px;
+    padding-left: 20px;
     box-shadow: 0 4px 8px ;
     opacity: 1;
 }
-
+/* search button */
 #btn{
     outline: none;
     width: 100px ;
@@ -86,73 +100,194 @@ body{
     border-radius: 25px 0 0 25px;
     background-color: rgb(245, 103, 21);
     font-size: 20px;
-    transition: all 0.8 ease-in-out;
+    transition: all 0.2s ease-in-out;
     opacity: 0.8;
-    
 }
+/* search hover button */
 #btn:hover{
     background-color: rgb(245, 103, 21);
     box-shadow: 0 2px 4px ;
     opacity: 1;
+}
+/* ------------------------------------------------------ */
 
-}
-#icone{
-    transition: all 0.2s ease-in-out;
-}
-#icone:hover{
-    transform: rotate(50deg);
-}
-.list{
-    width: 200px;
-}
-.list ul{
-    list-style: none;
-}
-.list ul li{
-    width: 170px;
-    height: 50px;
-    font-size: 40px;
-    line-height: 50px;
-    text-align: center;
-    float: right;
-    color: black;
-    position: relative;
-}
-.list ul ul{
-    display: none;
-}
-.list ul li:hover > ul{
-    display: block;
-}
-.list a{
-    text-decoration: none;
-}
+/* store image */
 .image{
     width: 218px;
     transition: all 0.2s ease-in-out;
 }
-.image:hover{
-    transform: scale(1.1);
-
-}
-.storeMain{
+/* main div for hold stores */
+#show{
     position: absolute;
     top: 60%;
     left: 30%;
     width: 40%;
     height: 150px;
     text-align: center;
-    opacity: 0;
     transition: all 0.5s ease-in-out;
+    opacity: 0;
     
 }
+.test{
+    background-color: #ff6600;
+    
+}
+
+/* storeTitle */
 #storeTitle{
     text-decoration: none;
     font-size: 40px;
 }
+/* store background div for using flex display */
 .storeBg{
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     flex-wrap: wrap;
     width: 40vw;
+    margin: 10px;
+}
+.store{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#saveWeb{
+    margin: 1px;
+    height: 40px;
+    outline-style: none;
+    font-size: 20px;
+    border-radius: 0 0 24px 24px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    color: white;
+
+}
+
+#saveWeb:hover{
+    background-color: white;
+    color: black;
+    
+}
+.image:hover{
+    transform: scale(1.1);
+}
+
+/* side buttones */
+.btn{
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    background: #1b1b1b;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease-in-out;
+}
+/* side buttones */
+.btn.click span:before{
+    content: '\f00d';
+}
+/* show side button when click menu icon */
+.btn.click{
+    left:260px;
+}
+/* menu icon */
+.btn span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+/* sidebar settings */
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #1b1b1b;
+    transition: left 0.4s ease-in-out;
+}
+/* sidebar show settings */
+.sidebar.show{
+    left: 0px;
+}
+/* sidebar  word settings*/
+.sidebar .text{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    background: #1e1e1e;
+    letter-spacing: 1px;
+}
+/* drop menu inside sidebar */
+nav ul{
+    background: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    
+}
+/* drop menu inside sidebar */
+nav ul li{
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* drop menu inside sidebar */
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+/* drop menu inside sidebar */
+nav ul li a:hover{
+    color: cyan;
+    background: #1e1e1e;
+    border-left-color: cyan ;
+}
+/* hide list inside sidebar */
+nav ul ul{
+    position: static;
+    display: none;
+}
+/* show side bar */
+nav ul .feat-show.show{
+    display: block;
+}
+/* drop menu inside sidebar */
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+    font-size: 15px;
+}
+/* drop menu inside sidebar */
+nav ul ul li a{
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+}
+/* sidebar icon */
+nav ul li a span{
+    margin-left: 80px;
+    width: 15px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.3s ease-in-out;
+}
+/* drop menu animation */
+nav ul li a span.rotate{
+    transform: rotate(-180deg)
+}
+/* ---------------------------------------- */
+.fa-trash-alt:hover{
+    color: red;
 }
