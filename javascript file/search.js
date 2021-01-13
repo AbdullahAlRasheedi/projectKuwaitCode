@@ -26,7 +26,6 @@ function remove(){
     
     document.getElementById("show").style.transform = "translate(0,150px)";
     document.getElementById("show").style.opacity = 0;
-    document.getElementById("save").style.display = "none"
    
 }
 
@@ -34,7 +33,6 @@ function remove(){
 function show(){
         document.getElementById("show").style.transform = "translate(0,-150px)";
         document.getElementById("show").style.opacity = 1;
-        document.getElementById("save").style.display = "block"
         
 }
 //link for store
@@ -68,49 +66,17 @@ function SerchLength(){
     }
 }
 
+let stores = [
+    "blink","amazon","quadra",
+    "newEgg","bestAlYousifi",
+    "eureka","xCite",
+]
 
-// let store = [
-//     {name:"blink"},
-//     {name:"amazon"},
-//     {name:"quadra"},
-// ]
-// function getStore(){
-//     for (let i = 0; i < store.length; i++) {
-//         let s = document.getElementById(`${i}`)
-//     }
-// }
-
-function filter(array , user){
-    for (let i = 0; i < array.length+1; i++) {
-        if(user == array[i]){
-            return null;
-        }
-        else{
-            return user;
-        }
-    }
-}
-let save = []
-
-function saveWord(){
-    let count = 0;
+function save(x){
     let user = userIntery();
-    if (filter(save,user) != null) {
-        save.push(user)
-        console.log(save)
-        document.getElementById("add").innerHTML += `<li id=${count} ><a herf="">${user} <i onclick="delet(${count})" class="fas fa-trash-alt"></i></a></li>`
-        count++;
-        let li = document.getElementById(count);
-    }
-    
-    }
-    let ul = document.getElementById("add");
-    
-    function delet(x){
-        save.pop(x);
-        console.log(save)
-        ul.parentNode.removeChild(li);
-    }
+    let add = document.getElementById("add");
+    add.innerHTML += `<li> <hr> product: ${user}<br> website: ${stores[x]}</li>`
+}
 
 
 $(`.btn`).click(function(){

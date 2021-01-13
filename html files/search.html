@@ -21,7 +21,7 @@
                 <li><a href="./search.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#"><i class="fas fa-user-alt"></i> Profile</a></li>
                 <li>
-                    <a class="feat-btn"><i class="fas fa-sticky-note"> Note</i><span class="fas fa-caret-down first"></span></a>
+                    <a class="feat-btn"><i class="fas fa-sticky-note"> My list</i><span class="fas fa-caret-down first"></span></a>
                     
                     <ul class="feat-show" id="add">
                         
@@ -61,22 +61,48 @@
             </datalist>
 
             <input class="result" id="btn" onclick="send()" type="submit" value="search">
-            <input type="button"id="save" onclick="saveWord()" value="save word">
             
     </div>
     <!-- stores -->
-    <div class="storeMain" id="show">
+    <div id="show">
         <h1 id="storeTitle">Stores</h1>
         <div class="storeBg">
-            <div class="store" onclick="getStore()">
+
+            <div class="store">
                 <a id="0" href="#" target="blink"><img class="image blink" src="../store image/blink.png" alt="blink"></a>
-                <a id="1" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
-                <a id="2" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
-                <a id="3" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
-                <a id="4" herf="#" target="blink"><img class="image bestAlYousifi" src="../store image/bestAlYousifi.png" alt="bestAlYousifi"></a>
-                <a id="5" herf="#" target="blink"><img class="image eureka" src="../store image/eureka.png" alt="eureka"></a>
-                <a id="6" herf="#" target="blink"><img class="image xCite" src="../store image/xcite.png" alt="xcite"></a>
+                <button id="saveWeb" onclick="save(0)">save</button>
             </div>
+
+                <div class="store">
+                <a id="1" herf="#" target="blink"><img class="image amazon" src="../store image/amazon.png" alt="amazon"></a>
+                <button id="saveWeb"onclick="save(1)">save</button>
+                </div>
+
+                <div class="store">
+                    <a id="2" herf="#" target="blink"><img class="image quadra" src="../store image/quadra.png" alt="quadra"></a>
+                    <button id="saveWeb"onclick="save(2)">save</button>
+                </div>
+
+                <div class="store">
+                    <a id="3" herf="#" target="blink"><img class="image newEgg" src="../store image/newEgg.png" alt="newEgg"></a>
+                    <button id="saveWeb"onclick="save(3)">save</button>
+                </div>
+
+                <div class="store">
+                    <a id="4" herf="#" target="blink"><img class="image bestAlYousifi" src="../store image/bestAlYousifi.png" alt="bestAlYousifi"></a>
+                    <button id="saveWeb"onclick="save(4)">save</button>
+                </div>
+
+                <div class="store">
+                    <a id="5" herf="#" target="blink"><img class="image eureka" src="../store image/eureka.png" alt="eureka"></a>
+                    <button id="saveWeb"onclick="save(5)">save</button>
+                </div>
+
+                <div class="store">
+                    <a id="6" herf="#" target="blink"><img class="image xCite" src="../store image/xcite.png" alt="xcite"></a>
+                    <button id="saveWeb"onclick="save(6)">save</button>
+                </div>
+
         </div>
     </div>
 
